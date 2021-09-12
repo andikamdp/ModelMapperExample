@@ -1,11 +1,13 @@
 package com.Andika_Training.demo.sample1;
 
 import org.modelmapper.ModelMapper;
+import org.springframework.stereotype.Component;
 
+@Component
 public class MappingSample1 {
 
-    private static Order getOrderdata(){
-        Address address = new Address();
+    public static Order getOrderdata(){
+        BillingAddress address = new BillingAddress();
         address.setCity("Bandung");
         address.setProvince("Jawa Barat");
 
@@ -17,16 +19,25 @@ public class MappingSample1 {
         customer.setName(name);
 
         Order order = new Order();
-        order.setAddress(address);
+        order.setBillingAddress(address);
         order.setCustomer(customer);
 
         return order;
     }
 
 
-    public void convertSample1_1(){
-        Order order = this.getOrderdata();
+    public OrderDto convertSample1(){
+        Order order = getOrderdata();
         ModelMapper modelMapper = new ModelMapper();
-        OrderDto orderDTO = modelMapper.map(order, OrderDto.class);
+        modelMapper.map(order, OrderDto.class);
+
+        OrderDto orderDTO = modelMapper.typeMap(Order.class, OrderDto.class).addMappings(mapper -> {
+            mapper.map(src -> src.getBillingAddress().getProvince(),
+                    OrderDto::setAddressProvince);
+            mapper.map(src -> src.getBillingAddress().getCity(),
+                    OrderDto::setAddressCity);
+        }).map(order);
+
+        return orderDTO;
     }
 }

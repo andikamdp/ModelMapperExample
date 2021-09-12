@@ -7,7 +7,8 @@ import lombok.Setter;
 @Data
 @Getter
 @Setter
-public class Address {
+public class BillingAddress {
     String city;
     String province;
+    Integer streetNo;
 }
