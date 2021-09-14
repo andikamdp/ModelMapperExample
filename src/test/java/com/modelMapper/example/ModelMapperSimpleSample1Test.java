@@ -1,8 +1,8 @@
-package com.Andika_Training.demo;
+package com.modelMapper.example;
 
-import com.Andika_Training.demo.model.domain.Order;
-import com.Andika_Training.demo.model.dto.OrderDto;
-import com.Andika_Training.demo.model.mapper.OrderMapper;
+import com.modelMapper.example.model.domain.Order;
+import com.modelMapper.example.model.dto.OrderDto;
+import com.modelMapper.example.model.mapper.OrderMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 

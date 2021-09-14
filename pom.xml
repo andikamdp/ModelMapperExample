@@ -8,11 +8,11 @@
 		<version>2.3.8.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.Andika_Training</groupId>
-	<artifactId>Spring_Boot_Training</artifactId>
+	<groupId>com.modelMapper</groupId>
+	<artifactId>modelMapperExample</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Spring_Boot_Training</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Demo project for model mapping in Spring Boot</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>

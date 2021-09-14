@@ -1,9 +1,9 @@
-package com.Andika_Training.demo;
+package com.modelMapper.example;
 
-import com.Andika_Training.demo.model.domain.BillingAddress;
-import com.Andika_Training.demo.model.domain.Customer;
-import com.Andika_Training.demo.model.domain.Name;
-import com.Andika_Training.demo.model.domain.Order;
+import com.modelMapper.example.model.domain.BillingAddress;
+import com.modelMapper.example.model.domain.Customer;
+import com.modelMapper.example.model.domain.Name;
+import com.modelMapper.example.model.domain.Order;
 
 import java.util.Date;
 

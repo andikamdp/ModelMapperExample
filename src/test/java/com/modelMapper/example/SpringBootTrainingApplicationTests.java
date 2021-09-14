@@ -1,4 +1,4 @@
-package com.Andika_Training.demo;
+package com.modelMapper.example;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

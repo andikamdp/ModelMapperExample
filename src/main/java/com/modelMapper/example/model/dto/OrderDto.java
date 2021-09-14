@@ -1,4 +1,4 @@
-package com.Andika_Training.demo.model.dto;
+package com.modelMapper.example.model.dto;
 
 import lombok.Data;
 import lombok.Getter;

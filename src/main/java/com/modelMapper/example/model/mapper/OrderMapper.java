@@ -1,8 +1,8 @@
-package com.Andika_Training.demo.model.mapper;
+package com.modelMapper.example.model.mapper;
 
-import com.Andika_Training.demo.model.domain.Order;
-import com.Andika_Training.demo.model.dto.OrderDto;
-import com.Andika_Training.demo.utils.Utils;
+import com.modelMapper.example.model.domain.Order;
+import com.modelMapper.example.model.dto.OrderDto;
+import com.modelMapper.example.utils.Utils;
 import org.modelmapper.ModelMapper;
 
 public class OrderMapper {
