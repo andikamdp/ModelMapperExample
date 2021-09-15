@@ -21,9 +21,8 @@ public class Utils {
     }
 
     public static Converter<Date, String> converterDateToString()  {
-        Converter<Date, String> formatDate = ctx -> ctx.getSource() != null
+        return ctx -> ctx.getSource() != null
                 ? Utils.dateToStringFormat(ctx.getSource(),Utils.yyyydMMddd)
                 : "";
-        return formatDate;
     }
 }
