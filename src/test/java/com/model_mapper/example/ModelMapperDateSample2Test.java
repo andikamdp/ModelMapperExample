@@ -1,10 +1,10 @@
-package com.modelMapper.example;
+package com.model_mapper.example;
 
 
-import com.modelMapper.example.model.domain.Order;
-import com.modelMapper.example.model.dto.OrderDto;
-import com.modelMapper.example.model.mapper.OrderMapper;
-import com.modelMapper.example.utils.Utils;
+import com.model_mapper.example.model.domain.Order;
+import com.model_mapper.example.model.dto.OrderDto;
+import com.model_mapper.example.model.mapper.OrderMapper;
+import com.model_mapper.example.utils.Utils;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -67,7 +67,7 @@ class ModelMapperDateSample2Test {
     void MappingSample2OrderDate() {
         Order order = SampleData.getSampleOrderData2();
         OrderDto orderDto = OrderMapper.getMapper().dateMapper(order);
-        assertEquals("Compare OrderDate :", Utils.dateToStringFormat(order.getOrderDate(),Utils.yyyydMMddd), orderDto.getDate());
+        assertEquals("Compare OrderDate :", Utils.dateToStringFormat(order.getOrderDate(), Utils.yyyydMMddd), orderDto.getDate());
     }
 
 }

@@ -1,4 +1,4 @@
-package com.modelMapper.example.model.dto;
+package com.model_mapper.example.model.dto;
 
 import lombok.Data;
 import lombok.Getter;

@@ -1,8 +1,8 @@
-package com.modelMapper.example.model.mapper;
+package com.model_mapper.example.model.mapper;
 
-import com.modelMapper.example.model.domain.Order;
-import com.modelMapper.example.model.dto.OrderDto;
-import com.modelMapper.example.utils.Utils;
+import com.model_mapper.example.model.domain.Order;
+import com.model_mapper.example.model.dto.OrderDto;
+import com.model_mapper.example.utils.Utils;
 import org.modelmapper.ModelMapper;
 
 public class OrderMapper {

@@ -1,8 +1,8 @@
-package com.modelMapper.example;
+package com.model_mapper.example;
 
-import com.modelMapper.example.model.domain.Order;
-import com.modelMapper.example.model.dto.OrderDto;
-import com.modelMapper.example.model.mapper.OrderMapper;
+import com.model_mapper.example.model.domain.Order;
+import com.model_mapper.example.model.dto.OrderDto;
+import com.model_mapper.example.model.mapper.OrderMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 

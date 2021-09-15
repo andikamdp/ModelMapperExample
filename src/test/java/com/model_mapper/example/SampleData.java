@@ -1,14 +1,14 @@
-package com.modelMapper.example;
+package com.model_mapper.example;
 
-import com.modelMapper.example.model.domain.BillingAddress;
-import com.modelMapper.example.model.domain.Customer;
-import com.modelMapper.example.model.domain.Name;
-import com.modelMapper.example.model.domain.Order;
+import com.model_mapper.example.model.domain.BillingAddress;
+import com.model_mapper.example.model.domain.Customer;
+import com.model_mapper.example.model.domain.Name;
+import com.model_mapper.example.model.domain.Order;
 
 import java.util.Date;
 
 public class SampleData {
-    public static Order getSampleOrderData1(){
+    public static Order getSampleOrderData1() {
         BillingAddress address = new BillingAddress();
         address.setCity("Bandung");
         address.setProvince("Jawa Barat");
@@ -27,7 +27,7 @@ public class SampleData {
         return order;
     }
 
-    public static Order getSampleOrderData2(){
+    public static Order getSampleOrderData2() {
         BillingAddress address = new BillingAddress();
         address.setCity("Semarang");
         address.setProvince("Jawa Tengah");

@@ -1,4 +1,4 @@
-package com.modelMapper.example.utils;
+package com.model_mapper.example.utils;
 
 import org.modelmapper.Converter;
 
@@ -20,9 +20,9 @@ public class Utils {
         return new SimpleDateFormat(dateFormat).parse(stringDate);
     }
 
-    public static Converter<Date, String> converterDateToString()  {
+    public static Converter<Date, String> converterDateToString() {
         return ctx -> ctx.getSource() != null
-                ? Utils.dateToStringFormat(ctx.getSource(),Utils.yyyydMMddd)
+                ? Utils.dateToStringFormat(ctx.getSource(), Utils.yyyydMMddd)
                 : "";
     }
 }
