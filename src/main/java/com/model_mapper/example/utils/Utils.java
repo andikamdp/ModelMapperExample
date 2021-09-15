@@ -11,9 +11,9 @@ public class Utils {
     private Utils() {
     }
 
-    public static final String yyyymmdd = "yyyyMMdd";
-    public static final String yyyydmmddd = "yyyy-MM-dd";
-    public static final String yyyyummudd = "yyyy_MM_dd";
+    public static final String YYYYMMDD = "yyyyMMdd";
+    public static final String YYYY_D_MM_D_DD = "yyyy-MM-dd";
+    public static final String YYYYUMMUDD = "yyyy_MM_dd";
 
     public static String dateToStringFormat(Date date, String dateFormat) {
         return new SimpleDateFormat(dateFormat).format(date);
@@ -25,7 +25,7 @@ public class Utils {
 
     public static Converter<Date, String> converterDateToString() {
         return ctx -> ctx.getSource() != null
-                ? Utils.dateToStringFormat(ctx.getSource(), Utils.yyyydmmddd)
+                ? Utils.dateToStringFormat(ctx.getSource(), Utils.YYYY_D_MM_D_DD)
                 : "";
     }
 }

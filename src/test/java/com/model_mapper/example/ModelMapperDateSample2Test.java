@@ -67,7 +67,7 @@ class ModelMapperDateSample2Test {
     void MappingSample2OrderDate() {
         Order order = SampleData.getSampleOrderData2();
         OrderDto orderDto = OrderMapper.getMapper().dateMapper(order);
-        assertEquals("Compare OrderDate :", Utils.dateToStringFormat(order.getOrderDate(), Utils.yyyydmmddd), orderDto.getDate());
+        assertEquals("Compare OrderDate :", Utils.dateToStringFormat(order.getOrderDate(), Utils.YYYY_D_MM_D_DD), orderDto.getDate());
     }
 
 }
