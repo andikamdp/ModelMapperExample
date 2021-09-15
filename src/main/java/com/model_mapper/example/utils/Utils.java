@@ -8,9 +8,12 @@ import java.util.Date;
 
 public class Utils {
 
-    public static final String yyyyMMdd = "yyyyMMdd";
-    public static final String yyyydMMddd = "yyyy-MM-dd";
-    public static final String yyyyuMMudd = "yyyy_MM_dd";
+    private Utils() {
+    }
+
+    public static final String yyyymmdd = "yyyyMMdd";
+    public static final String yyyydmmddd = "yyyy-MM-dd";
+    public static final String yyyyummudd = "yyyy_MM_dd";
 
     public static String dateToStringFormat(Date date, String dateFormat) {
         return new SimpleDateFormat(dateFormat).format(date);
@@ -22,7 +25,7 @@ public class Utils {
 
     public static Converter<Date, String> converterDateToString() {
         return ctx -> ctx.getSource() != null
-                ? Utils.dateToStringFormat(ctx.getSource(), Utils.yyyydMMddd)
+                ? Utils.dateToStringFormat(ctx.getSource(), Utils.yyyydmmddd)
                 : "";
     }
 }
