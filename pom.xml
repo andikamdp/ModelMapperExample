@@ -9,12 +9,12 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.modelMapper</groupId>
-	<artifactId>modelMapperExample</artifactId>
+	<artifactId>Model_Mapper</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Spring_Boot_Training</name>
+	<name>Model_Mapper</name>
 	<description>Demo project for model mapping in Spring Boot</description>
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>11</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -62,6 +62,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>2.3.8.RELEASE</version>
 			</plugin>
 		</plugins>
 	</build>
