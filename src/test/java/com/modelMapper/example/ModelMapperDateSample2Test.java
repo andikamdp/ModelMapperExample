@@ -11,7 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.springframework.test.util.AssertionErrors.assertEquals;
 
 @SpringBootTest
-public class ModelMapperDateSample2Test {
+class ModelMapperDateSample2Test {
 
 
     @Test

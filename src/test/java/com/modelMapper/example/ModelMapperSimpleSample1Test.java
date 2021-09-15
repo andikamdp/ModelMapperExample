@@ -9,7 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.springframework.test.util.AssertionErrors.assertEquals;
 
 @SpringBootTest
-public class ModelMapperSimpleSample1Test {
+class ModelMapperSimpleSample1Test {
 
     @Test
     void MappingSample1FirstName() {
