@@ -1,25 +1,22 @@
 package com.model_mapper.example.model.domain;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertSame;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
 
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
- class CustomerTest {
+class CustomerTest {
     @Test
-     void testCanEqual() {
+    void testCanEqual() {
         assertFalse((new Customer()).canEqual("Other"));
     }
 
     @Test
-     void testCanEqual2() {
+    void testCanEqual2() {
         Customer customer = new Customer();
 
         Name name = new Name();
@@ -35,7 +32,7 @@ import org.junit.jupiter.api.Test;
     }
 
     @Test
-     void testConstructor() {
+    void testConstructor() {
         Customer actualCustomer = new Customer();
         actualCustomer.setAge(1);
         LocalDateTime atStartOfDayResult = LocalDate.of(1970, 1, 1).atStartOfDay();
@@ -53,7 +50,7 @@ import org.junit.jupiter.api.Test;
     }
 
     @Test
-     void testEquals() {
+    void testEquals() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");
@@ -63,11 +60,11 @@ import org.junit.jupiter.api.Test;
         LocalDateTime atStartOfDayResult = LocalDate.of(1970, 1, 1).atStartOfDay();
         customer.setBirthDate(Date.from(atStartOfDayResult.atZone(ZoneId.systemDefault()).toInstant()));
         customer.setAge(1);
-        assertFalse(customer.equals(null));
+        assertNotEquals(customer, null);
     }
 
     @Test
-     void testEquals2() {
+    void testEquals2() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");
@@ -77,11 +74,11 @@ import org.junit.jupiter.api.Test;
         LocalDateTime atStartOfDayResult = LocalDate.of(1970, 1, 1).atStartOfDay();
         customer.setBirthDate(Date.from(atStartOfDayResult.atZone(ZoneId.systemDefault()).toInstant()));
         customer.setAge(1);
-        assertFalse(customer.equals("Different type to Customer"));
+        assertNotEquals(customer, "Different type to Customer");
     }
 
     @Test
-     void testEquals3() {
+    void testEquals3() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");
@@ -91,13 +88,13 @@ import org.junit.jupiter.api.Test;
         LocalDateTime atStartOfDayResult = LocalDate.of(1970, 1, 1).atStartOfDay();
         customer.setBirthDate(Date.from(atStartOfDayResult.atZone(ZoneId.systemDefault()).toInstant()));
         customer.setAge(1);
-        assertTrue(customer.equals(customer));
+        assertEquals(customer, customer);
         int expectedHashCodeResult = customer.hashCode();
         assertEquals(expectedHashCodeResult, customer.hashCode());
     }
 
     @Test
-     void testEquals4() {
+    void testEquals4() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");
@@ -117,7 +114,7 @@ import org.junit.jupiter.api.Test;
         LocalDateTime atStartOfDayResult1 = LocalDate.of(1970, 1, 1).atStartOfDay();
         customer1.setBirthDate(Date.from(atStartOfDayResult1.atZone(ZoneId.systemDefault()).toInstant()));
         customer1.setAge(1);
-        assertTrue(customer.equals(customer1));
+        assertEquals(customer1, customer);
         int expectedHashCodeResult = customer.hashCode();
         assertEquals(expectedHashCodeResult, customer1.hashCode());
     }

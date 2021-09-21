@@ -1,19 +1,17 @@
 package com.model_mapper.example.model.domain;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import org.junit.jupiter.api.Test;
 
- class BillingAddressTest {
+import static org.junit.jupiter.api.Assertions.*;
+
+class BillingAddressTest {
     @Test
-     void testCanEqual() {
+    void testCanEqual() {
         assertFalse((new BillingAddress()).canEqual("Other"));
     }
 
     @Test
-     void testCanEqual2() {
+    void testCanEqual2() {
         BillingAddress billingAddress = new BillingAddress();
 
         BillingAddress billingAddress1 = new BillingAddress();
@@ -24,7 +22,7 @@ import org.junit.jupiter.api.Test;
     }
 
     @Test
-     void testConstructor() {
+    void testConstructor() {
         BillingAddress actualBillingAddress = new BillingAddress();
         actualBillingAddress.setCity("Oxford");
         actualBillingAddress.setProvince("Province");
@@ -36,16 +34,16 @@ import org.junit.jupiter.api.Test;
     }
 
     @Test
-     void testEquals() {
+    void testEquals() {
         BillingAddress billingAddress = new BillingAddress();
         billingAddress.setCity("Oxford");
         billingAddress.setStreetNo(1);
         billingAddress.setProvince("Province");
-        assertFalse(billingAddress.equals(null));
+        assertNotEquals(billingAddress, null);
     }
 
     @Test
-     void testEquals10() {
+    void testEquals10() {
         BillingAddress billingAddress = new BillingAddress();
         billingAddress.setCity("Oxford");
         billingAddress.setStreetNo(1);
@@ -55,11 +53,11 @@ import org.junit.jupiter.api.Test;
         billingAddress1.setCity("Oxford");
         billingAddress1.setStreetNo(1);
         billingAddress1.setProvince("Province");
-        assertFalse(billingAddress.equals(billingAddress1));
+        assertNotEquals(billingAddress, (billingAddress1));
     }
 
     @Test
-     void testEquals11() {
+    void testEquals11() {
         BillingAddress billingAddress = new BillingAddress();
         billingAddress.setCity(null);
         billingAddress.setStreetNo(1);
@@ -69,13 +67,13 @@ import org.junit.jupiter.api.Test;
         billingAddress1.setCity(null);
         billingAddress1.setStreetNo(1);
         billingAddress1.setProvince("Province");
-        assertTrue(billingAddress.equals(billingAddress1));
+        assertEquals(billingAddress, (billingAddress1));
         int expectedHashCodeResult = billingAddress.hashCode();
         assertEquals(expectedHashCodeResult, billingAddress1.hashCode());
     }
 
     @Test
-     void testEquals12() {
+    void testEquals12() {
         BillingAddress billingAddress = new BillingAddress();
         billingAddress.setCity("Oxford");
         billingAddress.setStreetNo(null);
@@ -85,13 +83,13 @@ import org.junit.jupiter.api.Test;
         billingAddress1.setCity("Oxford");
         billingAddress1.setStreetNo(null);
         billingAddress1.setProvince("Province");
-        assertTrue(billingAddress.equals(billingAddress1));
+        assertEquals(billingAddress, (billingAddress1));
         int expectedHashCodeResult = billingAddress.hashCode();
         assertEquals(expectedHashCodeResult, billingAddress1.hashCode());
     }
 
     @Test
-     void testEquals13() {
+    void testEquals13() {
         BillingAddress billingAddress = new BillingAddress();
         billingAddress.setCity("Oxford");
         billingAddress.setStreetNo(1);
@@ -101,33 +99,33 @@ import org.junit.jupiter.api.Test;
         billingAddress1.setCity("Oxford");
         billingAddress1.setStreetNo(1);
         billingAddress1.setProvince(null);
-        assertTrue(billingAddress.equals(billingAddress1));
+        assertEquals(billingAddress, (billingAddress1));
         int expectedHashCodeResult = billingAddress.hashCode();
         assertEquals(expectedHashCodeResult, billingAddress1.hashCode());
     }
 
     @Test
-     void testEquals2() {
+    void testEquals2() {
         BillingAddress billingAddress = new BillingAddress();
         billingAddress.setCity("Oxford");
         billingAddress.setStreetNo(1);
         billingAddress.setProvince("Province");
-        assertFalse(billingAddress.equals("Different type to BillingAddress"));
+        assertNotEquals(billingAddress, "Different type to BillingAddress");
     }
 
     @Test
-     void testEquals3() {
+    void testEquals3() {
         BillingAddress billingAddress = new BillingAddress();
         billingAddress.setCity("Oxford");
         billingAddress.setStreetNo(1);
         billingAddress.setProvince("Province");
-        assertTrue(billingAddress.equals(billingAddress));
+        assertEquals(billingAddress, billingAddress);
         int expectedHashCodeResult = billingAddress.hashCode();
         assertEquals(expectedHashCodeResult, billingAddress.hashCode());
     }
 
     @Test
-     void testEquals4() {
+    void testEquals4() {
         BillingAddress billingAddress = new BillingAddress();
         billingAddress.setCity("Oxford");
         billingAddress.setStreetNo(1);
@@ -137,13 +135,13 @@ import org.junit.jupiter.api.Test;
         billingAddress1.setCity("Oxford");
         billingAddress1.setStreetNo(1);
         billingAddress1.setProvince("Province");
-        assertTrue(billingAddress.equals(billingAddress1));
+        assertEquals(billingAddress1, billingAddress);
         int expectedHashCodeResult = billingAddress.hashCode();
         assertEquals(expectedHashCodeResult, billingAddress1.hashCode());
     }
 
     @Test
-     void testEquals5() {
+    void testEquals5() {
         BillingAddress billingAddress = new BillingAddress();
         billingAddress.setCity(null);
         billingAddress.setStreetNo(1);
@@ -157,7 +155,7 @@ import org.junit.jupiter.api.Test;
     }
 
     @Test
-     void testEquals6() {
+    void testEquals6() {
         BillingAddress billingAddress = new BillingAddress();
         billingAddress.setCity("Province");
         billingAddress.setStreetNo(1);
@@ -167,11 +165,11 @@ import org.junit.jupiter.api.Test;
         billingAddress1.setCity("Oxford");
         billingAddress1.setStreetNo(1);
         billingAddress1.setProvince("Province");
-        assertFalse(billingAddress.equals(billingAddress1));
+        assertNotEquals(billingAddress1, billingAddress);
     }
 
     @Test
-     void testEquals7() {
+    void testEquals7() {
         BillingAddress billingAddress = new BillingAddress();
         billingAddress.setCity("Oxford");
         billingAddress.setStreetNo(0);
@@ -181,11 +179,11 @@ import org.junit.jupiter.api.Test;
         billingAddress1.setCity("Oxford");
         billingAddress1.setStreetNo(1);
         billingAddress1.setProvince("Province");
-        assertFalse(billingAddress.equals(billingAddress1));
+        assertNotEquals(billingAddress1, billingAddress);
     }
 
     @Test
-     void testEquals8() {
+    void testEquals8() {
         BillingAddress billingAddress = new BillingAddress();
         billingAddress.setCity("Oxford");
         billingAddress.setStreetNo(null);
@@ -195,11 +193,11 @@ import org.junit.jupiter.api.Test;
         billingAddress1.setCity("Oxford");
         billingAddress1.setStreetNo(1);
         billingAddress1.setProvince("Province");
-        assertFalse(billingAddress.equals(billingAddress1));
+        assertNotEquals(billingAddress1, billingAddress);
     }
 
     @Test
-     void testEquals9() {
+    void testEquals9() {
         BillingAddress billingAddress = new BillingAddress();
         billingAddress.setCity("Oxford");
         billingAddress.setStreetNo(1);
@@ -209,7 +207,7 @@ import org.junit.jupiter.api.Test;
         billingAddress1.setCity("Oxford");
         billingAddress1.setStreetNo(1);
         billingAddress1.setProvince("Province");
-        assertFalse(billingAddress.equals(billingAddress1));
+        assertNotEquals(billingAddress1, billingAddress);
     }
 }
 

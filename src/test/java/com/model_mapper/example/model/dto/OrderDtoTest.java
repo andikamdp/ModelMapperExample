@@ -1,25 +1,22 @@
 package com.model_mapper.example.model.dto;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertSame;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
 
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
- class OrderDtoTest {
+class OrderDtoTest {
     @Test
-     void testCanEqual() {
+    void testCanEqual() {
         assertFalse((new OrderDto()).canEqual("Other"));
     }
 
     @Test
-     void testCanEqual2() {
+    void testCanEqual2() {
         OrderDto orderDto = new OrderDto();
 
         OrderDto orderDto1 = new OrderDto();
@@ -36,7 +33,7 @@ import org.junit.jupiter.api.Test;
     }
 
     @Test
-     void testConstructor() {
+    void testConstructor() {
         OrderDto actualOrderDto = new OrderDto();
         actualOrderDto.setAddressCity("42 Main St");
         actualOrderDto.setAddressProvince("42 Main St");
@@ -62,7 +59,7 @@ import org.junit.jupiter.api.Test;
     }
 
     @Test
-     void testEquals() {
+    void testEquals() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("42 Main St");
@@ -73,11 +70,11 @@ import org.junit.jupiter.api.Test;
         orderDto.setCustomerBirthDate(Date.from(atStartOfDayResult.atZone(ZoneId.systemDefault()).toInstant()));
         orderDto.setAddressProvince("42 Main St");
         orderDto.setDate("2020-03-01");
-        assertFalse(orderDto.equals(null));
+        assertNotEquals(orderDto, null);
     }
 
     @Test
-     void testEquals10() {
+    void testEquals10() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("42 Main St");
@@ -99,11 +96,11 @@ import org.junit.jupiter.api.Test;
         orderDto1.setCustomerBirthDate(Date.from(atStartOfDayResult1.atZone(ZoneId.systemDefault()).toInstant()));
         orderDto1.setAddressProvince("42 Main St");
         orderDto1.setDate("2020-03-01");
-        assertFalse(orderDto.equals(orderDto1));
+        assertNotEquals(orderDto1, orderDto);
     }
 
     @Test
-     void testEquals11() {
+    void testEquals11() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("42 Main St");
@@ -125,11 +122,11 @@ import org.junit.jupiter.api.Test;
         orderDto1.setCustomerBirthDate(Date.from(atStartOfDayResult1.atZone(ZoneId.systemDefault()).toInstant()));
         orderDto1.setAddressProvince("42 Main St");
         orderDto1.setDate("2020-03-01");
-        assertFalse(orderDto.equals(orderDto1));
+        assertNotEquals(orderDto1, orderDto);
     }
 
     @Test
-     void testEquals12() {
+    void testEquals12() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("42 Main St");
@@ -151,11 +148,11 @@ import org.junit.jupiter.api.Test;
         orderDto1.setCustomerBirthDate(Date.from(atStartOfDayResult1.atZone(ZoneId.systemDefault()).toInstant()));
         orderDto1.setAddressProvince("42 Main St");
         orderDto1.setDate("2020-03-01");
-        assertFalse(orderDto.equals(orderDto1));
+        assertNotEquals(orderDto1, orderDto);
     }
 
     @Test
-     void testEquals13() {
+    void testEquals13() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("42 Main St");
@@ -177,11 +174,11 @@ import org.junit.jupiter.api.Test;
         orderDto1.setCustomerBirthDate(Date.from(atStartOfDayResult1.atZone(ZoneId.systemDefault()).toInstant()));
         orderDto1.setAddressProvince("42 Main St");
         orderDto1.setDate("2020-03-01");
-        assertFalse(orderDto.equals(orderDto1));
+        assertNotEquals(orderDto1, orderDto);
     }
 
     @Test
-     void testEquals14() {
+    void testEquals14() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("42 Main St");
@@ -203,11 +200,11 @@ import org.junit.jupiter.api.Test;
         orderDto1.setCustomerBirthDate(Date.from(atStartOfDayResult1.atZone(ZoneId.systemDefault()).toInstant()));
         orderDto1.setAddressProvince("42 Main St");
         orderDto1.setDate("2020-03-01");
-        assertFalse(orderDto.equals(orderDto1));
+        assertNotEquals(orderDto1, orderDto);
     }
 
     @Test
-     void testEquals15() {
+    void testEquals15() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("42 Main St");
@@ -228,11 +225,11 @@ import org.junit.jupiter.api.Test;
         orderDto1.setCustomerBirthDate(Date.from(atStartOfDayResult.atZone(ZoneId.systemDefault()).toInstant()));
         orderDto1.setAddressProvince("42 Main St");
         orderDto1.setDate("2020-03-01");
-        assertFalse(orderDto.equals(orderDto1));
+        assertNotEquals(orderDto1, orderDto);
     }
 
     @Test
-     void testEquals16() {
+    void testEquals16() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("42 Main St");
@@ -254,11 +251,11 @@ import org.junit.jupiter.api.Test;
         orderDto1.setCustomerBirthDate(Date.from(atStartOfDayResult1.atZone(ZoneId.systemDefault()).toInstant()));
         orderDto1.setAddressProvince("42 Main St");
         orderDto1.setDate("2020-03-01");
-        assertFalse(orderDto.equals(orderDto1));
+        assertNotEquals(orderDto1, orderDto);
     }
 
     @Test
-     void testEquals17() {
+    void testEquals17() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("42 Main St");
@@ -280,11 +277,11 @@ import org.junit.jupiter.api.Test;
         orderDto1.setCustomerBirthDate(Date.from(atStartOfDayResult1.atZone(ZoneId.systemDefault()).toInstant()));
         orderDto1.setAddressProvince("42 Main St");
         orderDto1.setDate("2020-03-01");
-        assertFalse(orderDto.equals(orderDto1));
+        assertNotEquals(orderDto1, orderDto);
     }
 
     @Test
-     void testEquals18() {
+    void testEquals18() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("42 Main St");
@@ -306,11 +303,11 @@ import org.junit.jupiter.api.Test;
         orderDto1.setCustomerBirthDate(Date.from(atStartOfDayResult1.atZone(ZoneId.systemDefault()).toInstant()));
         orderDto1.setAddressProvince("42 Main St");
         orderDto1.setDate("2020-03-01");
-        assertFalse(orderDto.equals(orderDto1));
+        assertNotEquals(orderDto1, orderDto);
     }
 
     @Test
-     void testEquals19() {
+    void testEquals19() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("42 Main St");
@@ -332,11 +329,11 @@ import org.junit.jupiter.api.Test;
         orderDto1.setCustomerBirthDate(Date.from(atStartOfDayResult1.atZone(ZoneId.systemDefault()).toInstant()));
         orderDto1.setAddressProvince("42 Main St");
         orderDto1.setDate("2020-03-01");
-        assertFalse(orderDto.equals(orderDto1));
+        assertNotEquals(orderDto1, orderDto);
     }
 
     @Test
-     void testEquals2() {
+    void testEquals2() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("42 Main St");
@@ -347,11 +344,11 @@ import org.junit.jupiter.api.Test;
         orderDto.setCustomerBirthDate(Date.from(atStartOfDayResult.atZone(ZoneId.systemDefault()).toInstant()));
         orderDto.setAddressProvince("42 Main St");
         orderDto.setDate("2020-03-01");
-        assertFalse(orderDto.equals("Different type to OrderDto"));
+        assertNotEquals(orderDto, "Different type to OrderDto");
     }
 
     @Test
-     void testEquals3() {
+    void testEquals3() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("42 Main St");
@@ -362,13 +359,13 @@ import org.junit.jupiter.api.Test;
         orderDto.setCustomerBirthDate(Date.from(atStartOfDayResult.atZone(ZoneId.systemDefault()).toInstant()));
         orderDto.setAddressProvince("42 Main St");
         orderDto.setDate("2020-03-01");
-        assertTrue(orderDto.equals(orderDto));
+        assertEquals(orderDto, orderDto);
         int expectedHashCodeResult = orderDto.hashCode();
         assertEquals(expectedHashCodeResult, orderDto.hashCode());
     }
 
     @Test
-     void testEquals4() {
+    void testEquals4() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("42 Main St");
@@ -390,13 +387,13 @@ import org.junit.jupiter.api.Test;
         orderDto1.setCustomerBirthDate(Date.from(atStartOfDayResult1.atZone(ZoneId.systemDefault()).toInstant()));
         orderDto1.setAddressProvince("42 Main St");
         orderDto1.setDate("2020-03-01");
-        assertTrue(orderDto.equals(orderDto1));
+        assertEquals(orderDto1, orderDto);
         int expectedHashCodeResult = orderDto.hashCode();
         assertEquals(expectedHashCodeResult, orderDto1.hashCode());
     }
 
     @Test
-     void testEquals5() {
+    void testEquals5() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(0);
         orderDto.setAddressCity("42 Main St");
@@ -418,11 +415,11 @@ import org.junit.jupiter.api.Test;
         orderDto1.setCustomerBirthDate(Date.from(atStartOfDayResult1.atZone(ZoneId.systemDefault()).toInstant()));
         orderDto1.setAddressProvince("42 Main St");
         orderDto1.setDate("2020-03-01");
-        assertFalse(orderDto.equals(orderDto1));
+        assertNotEquals(orderDto1, orderDto);
     }
 
     @Test
-     void testEquals6() {
+    void testEquals6() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("Jane");
@@ -444,11 +441,11 @@ import org.junit.jupiter.api.Test;
         orderDto1.setCustomerBirthDate(Date.from(atStartOfDayResult1.atZone(ZoneId.systemDefault()).toInstant()));
         orderDto1.setAddressProvince("42 Main St");
         orderDto1.setDate("2020-03-01");
-        assertFalse(orderDto.equals(orderDto1));
+        assertNotEquals(orderDto1, orderDto);
     }
 
     @Test
-     void testEquals7() {
+    void testEquals7() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity(null);
@@ -470,11 +467,11 @@ import org.junit.jupiter.api.Test;
         orderDto1.setCustomerBirthDate(Date.from(atStartOfDayResult1.atZone(ZoneId.systemDefault()).toInstant()));
         orderDto1.setAddressProvince("42 Main St");
         orderDto1.setDate("2020-03-01");
-        assertFalse(orderDto.equals(orderDto1));
+        assertNotEquals(orderDto1, orderDto);
     }
 
     @Test
-     void testEquals8() {
+    void testEquals8() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("42 Main St");
@@ -496,11 +493,11 @@ import org.junit.jupiter.api.Test;
         orderDto1.setCustomerBirthDate(Date.from(atStartOfDayResult1.atZone(ZoneId.systemDefault()).toInstant()));
         orderDto1.setAddressProvince("42 Main St");
         orderDto1.setDate("2020-03-01");
-        assertFalse(orderDto.equals(orderDto1));
+        assertNotEquals(orderDto1, orderDto);
     }
 
     @Test
-     void testEquals9() {
+    void testEquals9() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("42 Main St");
@@ -522,7 +519,7 @@ import org.junit.jupiter.api.Test;
         orderDto1.setCustomerBirthDate(Date.from(atStartOfDayResult1.atZone(ZoneId.systemDefault()).toInstant()));
         orderDto1.setAddressProvince("42 Main St");
         orderDto1.setDate("2020-03-01");
-        assertFalse(orderDto.equals(orderDto1));
+        assertNotEquals(orderDto1, orderDto);
     }
 }
 

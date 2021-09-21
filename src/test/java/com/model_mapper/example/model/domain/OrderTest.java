@@ -1,25 +1,22 @@
 package com.model_mapper.example.model.domain;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertSame;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
 
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
- class OrderTest {
+class OrderTest {
     @Test
-     void testCanEqual() {
+    void testCanEqual() {
         assertFalse((new Order()).canEqual("Other"));
     }
 
     @Test
-     void testCanEqual2() {
+    void testCanEqual2() {
         Order order = new Order();
 
         Name name = new Name();
@@ -46,7 +43,7 @@ import org.junit.jupiter.api.Test;
     }
 
     @Test
-     void testConstructor() {
+    void testConstructor() {
         Order actualOrder = new Order();
         BillingAddress billingAddress = new BillingAddress();
         billingAddress.setCity("Oxford");
@@ -77,7 +74,7 @@ import org.junit.jupiter.api.Test;
     }
 
     @Test
-     void testEquals() {
+    void testEquals() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");
@@ -98,11 +95,11 @@ import org.junit.jupiter.api.Test;
         order.setBillingAddress(billingAddress);
         LocalDateTime atStartOfDayResult1 = LocalDate.of(1970, 1, 1).atStartOfDay();
         order.setOrderDate(Date.from(atStartOfDayResult1.atZone(ZoneId.systemDefault()).toInstant()));
-        assertFalse(order.equals(null));
+        assertNotEquals(order, null);
     }
 
     @Test
-     void testEquals2() {
+    void testEquals2() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");
@@ -123,11 +120,11 @@ import org.junit.jupiter.api.Test;
         order.setBillingAddress(billingAddress);
         LocalDateTime atStartOfDayResult1 = LocalDate.of(1970, 1, 1).atStartOfDay();
         order.setOrderDate(Date.from(atStartOfDayResult1.atZone(ZoneId.systemDefault()).toInstant()));
-        assertFalse(order.equals("Different type to Order"));
+        assertNotEquals(order, "Different type to Order");
     }
 
     @Test
-     void testEquals3() {
+    void testEquals3() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");
@@ -148,13 +145,13 @@ import org.junit.jupiter.api.Test;
         order.setBillingAddress(billingAddress);
         LocalDateTime atStartOfDayResult1 = LocalDate.of(1970, 1, 1).atStartOfDay();
         order.setOrderDate(Date.from(atStartOfDayResult1.atZone(ZoneId.systemDefault()).toInstant()));
-        assertTrue(order.equals(order));
+        assertEquals(order, order);
         int expectedHashCodeResult = order.hashCode();
         assertEquals(expectedHashCodeResult, order.hashCode());
     }
 
     @Test
-     void testEquals4() {
+    void testEquals4() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");
@@ -196,13 +193,13 @@ import org.junit.jupiter.api.Test;
         order1.setBillingAddress(billingAddress1);
         LocalDateTime atStartOfDayResult3 = LocalDate.of(1970, 1, 1).atStartOfDay();
         order1.setOrderDate(Date.from(atStartOfDayResult3.atZone(ZoneId.systemDefault()).toInstant()));
-        assertTrue(order.equals(order1));
+        assertEquals(order1, order);
         int expectedHashCodeResult = order.hashCode();
         assertEquals(expectedHashCodeResult, order1.hashCode());
     }
 
     @Test
-     void testEquals5() {
+    void testEquals5() {
         Name name = new Name();
         name.setLastName("Jane");
         name.setFirstName("Jane");
@@ -244,11 +241,11 @@ import org.junit.jupiter.api.Test;
         order1.setBillingAddress(billingAddress1);
         LocalDateTime atStartOfDayResult3 = LocalDate.of(1970, 1, 1).atStartOfDay();
         order1.setOrderDate(Date.from(atStartOfDayResult3.atZone(ZoneId.systemDefault()).toInstant()));
-        assertFalse(order.equals(order1));
+        assertNotEquals(order1, order);
     }
 
     @Test
-     void testEquals6() {
+    void testEquals6() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");
@@ -290,11 +287,11 @@ import org.junit.jupiter.api.Test;
         order1.setBillingAddress(billingAddress1);
         LocalDateTime atStartOfDayResult3 = LocalDate.of(1970, 1, 1).atStartOfDay();
         order1.setOrderDate(Date.from(atStartOfDayResult3.atZone(ZoneId.systemDefault()).toInstant()));
-        assertFalse(order.equals(order1));
+        assertNotEquals(order1, order);
     }
 
     @Test
-     void testEquals7() {
+    void testEquals7() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");
@@ -336,11 +333,11 @@ import org.junit.jupiter.api.Test;
         order1.setBillingAddress(billingAddress1);
         LocalDateTime atStartOfDayResult3 = LocalDate.of(1970, 1, 1).atStartOfDay();
         order1.setOrderDate(Date.from(atStartOfDayResult3.atZone(ZoneId.systemDefault()).toInstant()));
-        assertFalse(order.equals(order1));
+        assertNotEquals(order1, order);
     }
 
     @Test
-     void testEquals8() {
+    void testEquals8() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");
@@ -381,7 +378,7 @@ import org.junit.jupiter.api.Test;
         order1.setBillingAddress(billingAddress1);
         LocalDateTime atStartOfDayResult2 = LocalDate.of(1970, 1, 1).atStartOfDay();
         order1.setOrderDate(Date.from(atStartOfDayResult2.atZone(ZoneId.systemDefault()).toInstant()));
-        assertFalse(order.equals(order1));
+        assertNotEquals(order1, order);
     }
 }
 

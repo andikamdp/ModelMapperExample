@@ -1,19 +1,17 @@
 package com.model_mapper.example.model.domain;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import org.junit.jupiter.api.Test;
 
- class NameTest {
+import static org.junit.jupiter.api.Assertions.*;
+
+class NameTest {
     @Test
-     void testCanEqual() {
+    void testCanEqual() {
         assertFalse((new Name()).canEqual("Other"));
     }
 
     @Test
-     void testCanEqual2() {
+    void testCanEqual2() {
         Name name = new Name();
 
         Name name1 = new Name();
@@ -23,7 +21,7 @@ import org.junit.jupiter.api.Test;
     }
 
     @Test
-     void testConstructor() {
+    void testConstructor() {
         Name actualName = new Name();
         actualName.setFirstName("Jane");
         actualName.setLastName("Doe");
@@ -33,15 +31,15 @@ import org.junit.jupiter.api.Test;
     }
 
     @Test
-     void testEquals() {
+    void testEquals() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");
-        assertFalse(name.equals(null));
+        assertNotEquals(name, null);
     }
 
     @Test
-     void testEquals10() {
+    void testEquals10() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName(null);
@@ -49,31 +47,31 @@ import org.junit.jupiter.api.Test;
         Name name1 = new Name();
         name1.setLastName("Doe");
         name1.setFirstName(null);
-        assertTrue(name.equals(name1));
+        assertEquals(name1, name);
         int expectedHashCodeResult = name.hashCode();
         assertEquals(expectedHashCodeResult, name1.hashCode());
     }
 
     @Test
-     void testEquals2() {
+    void testEquals2() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");
-        assertFalse(name.equals("Different type to Name"));
+        assertNotEquals(name, "Different type to Name");
     }
 
     @Test
-     void testEquals3() {
+    void testEquals3() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");
-        assertTrue(name.equals(name));
+        assertEquals(name, name);
         int expectedHashCodeResult = name.hashCode();
         assertEquals(expectedHashCodeResult, name.hashCode());
     }
 
     @Test
-     void testEquals4() {
+    void testEquals4() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");
@@ -81,13 +79,13 @@ import org.junit.jupiter.api.Test;
         Name name1 = new Name();
         name1.setLastName("Doe");
         name1.setFirstName("Jane");
-        assertTrue(name.equals(name1));
+        assertEquals(name1, name);
         int expectedHashCodeResult = name.hashCode();
         assertEquals(expectedHashCodeResult, name1.hashCode());
     }
 
     @Test
-     void testEquals5() {
+    void testEquals5() {
         Name name = new Name();
         name.setLastName("Jane");
         name.setFirstName("Jane");
@@ -95,11 +93,11 @@ import org.junit.jupiter.api.Test;
         Name name1 = new Name();
         name1.setLastName("Doe");
         name1.setFirstName("Jane");
-        assertFalse(name.equals(name1));
+        assertNotEquals(name1, name);
     }
 
     @Test
-     void testEquals6() {
+    void testEquals6() {
         Name name = new Name();
         name.setLastName(null);
         name.setFirstName("Jane");
@@ -107,11 +105,11 @@ import org.junit.jupiter.api.Test;
         Name name1 = new Name();
         name1.setLastName("Doe");
         name1.setFirstName("Jane");
-        assertFalse(name.equals(name1));
+        assertNotEquals(name1, name);
     }
 
     @Test
-     void testEquals7() {
+    void testEquals7() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName(null);
@@ -119,11 +117,11 @@ import org.junit.jupiter.api.Test;
         Name name1 = new Name();
         name1.setLastName("Doe");
         name1.setFirstName("Jane");
-        assertFalse(name.equals(name1));
+        assertNotEquals(name1, name);
     }
 
     @Test
-     void testEquals8() {
+    void testEquals8() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Doe");
@@ -131,11 +129,11 @@ import org.junit.jupiter.api.Test;
         Name name1 = new Name();
         name1.setLastName("Doe");
         name1.setFirstName("Jane");
-        assertFalse(name.equals(name1));
+        assertNotEquals(name1, name);
     }
 
     @Test
-     void testEquals9() {
+    void testEquals9() {
         Name name = new Name();
         name.setLastName(null);
         name.setFirstName("Jane");
@@ -143,7 +141,7 @@ import org.junit.jupiter.api.Test;
         Name name1 = new Name();
         name1.setLastName(null);
         name1.setFirstName("Jane");
-        assertTrue(name.equals(name1));
+        assertEquals(name1, name);
         int expectedHashCodeResult = name.hashCode();
         assertEquals(expectedHashCodeResult, name1.hashCode());
     }
