@@ -95,7 +95,7 @@ class OrderTest {
         order.setBillingAddress(billingAddress);
         LocalDateTime atStartOfDayResult1 = LocalDate.of(1970, 1, 1).atStartOfDay();
         order.setOrderDate(Date.from(atStartOfDayResult1.atZone(ZoneId.systemDefault()).toInstant()));
-        assertNotEquals(order, null);
+        assertNotEquals(null,order);
     }
 
     @Test
@@ -120,7 +120,7 @@ class OrderTest {
         order.setBillingAddress(billingAddress);
         LocalDateTime atStartOfDayResult1 = LocalDate.of(1970, 1, 1).atStartOfDay();
         order.setOrderDate(Date.from(atStartOfDayResult1.atZone(ZoneId.systemDefault()).toInstant()));
-        assertNotEquals(order, "Different type to Order");
+        assertNotEquals("Different type to Order",order);
     }
 
     @Test

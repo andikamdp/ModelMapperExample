@@ -60,7 +60,7 @@ class CustomerTest {
         LocalDateTime atStartOfDayResult = LocalDate.of(1970, 1, 1).atStartOfDay();
         customer.setBirthDate(Date.from(atStartOfDayResult.atZone(ZoneId.systemDefault()).toInstant()));
         customer.setAge(1);
-        assertNotEquals(customer, null);
+        assertNotEquals(null,customer);
     }
 
     @Test
@@ -74,7 +74,7 @@ class CustomerTest {
         LocalDateTime atStartOfDayResult = LocalDate.of(1970, 1, 1).atStartOfDay();
         customer.setBirthDate(Date.from(atStartOfDayResult.atZone(ZoneId.systemDefault()).toInstant()));
         customer.setAge(1);
-        assertNotEquals(customer, "Different type to Customer");
+        assertNotEquals("Different type to Customer",customer);
     }
 
     @Test

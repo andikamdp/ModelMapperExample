@@ -39,7 +39,7 @@ class BillingAddressTest {
         billingAddress.setCity("Oxford");
         billingAddress.setStreetNo(1);
         billingAddress.setProvince("Province");
-        assertNotEquals(billingAddress, null);
+        assertNotEquals(null, billingAddress);
     }
 
     @Test
@@ -110,7 +110,7 @@ class BillingAddressTest {
         billingAddress.setCity("Oxford");
         billingAddress.setStreetNo(1);
         billingAddress.setProvince("Province");
-        assertNotEquals(billingAddress, "Different type to BillingAddress");
+        assertNotEquals("Different type to BillingAddress",billingAddress);
     }
 
     @Test
@@ -151,7 +151,7 @@ class BillingAddressTest {
         billingAddress1.setCity("Oxford");
         billingAddress1.setStreetNo(1);
         billingAddress1.setProvince("Province");
-        assertFalse(billingAddress.equals(billingAddress1));
+        assertNotEquals(billingAddress1, billingAddress);
     }
 
     @Test

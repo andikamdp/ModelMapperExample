@@ -70,7 +70,7 @@ class OrderDtoTest {
         orderDto.setCustomerBirthDate(Date.from(atStartOfDayResult.atZone(ZoneId.systemDefault()).toInstant()));
         orderDto.setAddressProvince("42 Main St");
         orderDto.setDate("2020-03-01");
-        assertNotEquals(orderDto, null);
+        assertNotEquals(null,orderDto);
     }
 
     @Test
@@ -344,7 +344,7 @@ class OrderDtoTest {
         orderDto.setCustomerBirthDate(Date.from(atStartOfDayResult.atZone(ZoneId.systemDefault()).toInstant()));
         orderDto.setAddressProvince("42 Main St");
         orderDto.setDate("2020-03-01");
-        assertNotEquals(orderDto, "Different type to OrderDto");
+        assertNotEquals("Different type to OrderDto",orderDto);
     }
 
     @Test

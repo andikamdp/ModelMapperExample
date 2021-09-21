@@ -35,7 +35,7 @@ class NameTest {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");
-        assertNotEquals(name, null);
+        assertNotEquals(null,name);
     }
 
     @Test
@@ -57,7 +57,7 @@ class NameTest {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");
-        assertNotEquals(name, "Different type to Name");
+        assertNotEquals("Different type to Name",name);
     }
 
     @Test
