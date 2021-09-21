@@ -12,9 +12,9 @@
 //import org.modelmapper.internal.MappingContextImpl;
 //import org.modelmapper.internal.MappingEngineImpl;
 //
-//public class UtilsTest {
+// class UtilsTest {
 //    @Test
-//    public void testDateToStringFormat() throws ParseException {
+//     void testDateToStringFormat() throws ParseException {
 //        // TODO: This test is incomplete.
 //        //   Reason: No meaningful assertions found.
 //        //   To help Diffblue Cover to find assertions, please add getters to the
@@ -25,7 +25,7 @@
 //    }
 //
 //    @Test
-//    public void testConverterDateToString() {
+//     void testConverterDateToString() {
 //        Converter<Date, String> actualConverterDateToStringResult = Utils.converterDateToString();
 //        Date source = new Date(1L);
 //        Class<?> sourceType = Date.class;

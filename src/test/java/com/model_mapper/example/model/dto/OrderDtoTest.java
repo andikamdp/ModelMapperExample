@@ -12,14 +12,14 @@ import java.util.Date;
 
 import org.junit.jupiter.api.Test;
 
-public class OrderDtoTest {
+ class OrderDtoTest {
     @Test
-    public void testCanEqual() {
+     void testCanEqual() {
         assertFalse((new OrderDto()).canEqual("Other"));
     }
 
     @Test
-    public void testCanEqual2() {
+     void testCanEqual2() {
         OrderDto orderDto = new OrderDto();
 
         OrderDto orderDto1 = new OrderDto();
@@ -36,7 +36,7 @@ public class OrderDtoTest {
     }
 
     @Test
-    public void testConstructor() {
+     void testConstructor() {
         OrderDto actualOrderDto = new OrderDto();
         actualOrderDto.setAddressCity("42 Main St");
         actualOrderDto.setAddressProvince("42 Main St");
@@ -62,7 +62,7 @@ public class OrderDtoTest {
     }
 
     @Test
-    public void testEquals() {
+     void testEquals() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("42 Main St");
@@ -77,7 +77,7 @@ public class OrderDtoTest {
     }
 
     @Test
-    public void testEquals10() {
+     void testEquals10() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("42 Main St");
@@ -103,7 +103,7 @@ public class OrderDtoTest {
     }
 
     @Test
-    public void testEquals11() {
+     void testEquals11() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("42 Main St");
@@ -129,7 +129,7 @@ public class OrderDtoTest {
     }
 
     @Test
-    public void testEquals12() {
+     void testEquals12() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("42 Main St");
@@ -155,7 +155,7 @@ public class OrderDtoTest {
     }
 
     @Test
-    public void testEquals13() {
+     void testEquals13() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("42 Main St");
@@ -181,7 +181,7 @@ public class OrderDtoTest {
     }
 
     @Test
-    public void testEquals14() {
+     void testEquals14() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("42 Main St");
@@ -207,7 +207,7 @@ public class OrderDtoTest {
     }
 
     @Test
-    public void testEquals15() {
+     void testEquals15() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("42 Main St");
@@ -232,7 +232,7 @@ public class OrderDtoTest {
     }
 
     @Test
-    public void testEquals16() {
+     void testEquals16() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("42 Main St");
@@ -258,7 +258,7 @@ public class OrderDtoTest {
     }
 
     @Test
-    public void testEquals17() {
+     void testEquals17() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("42 Main St");
@@ -284,7 +284,7 @@ public class OrderDtoTest {
     }
 
     @Test
-    public void testEquals18() {
+     void testEquals18() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("42 Main St");
@@ -310,7 +310,7 @@ public class OrderDtoTest {
     }
 
     @Test
-    public void testEquals19() {
+     void testEquals19() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("42 Main St");
@@ -336,7 +336,7 @@ public class OrderDtoTest {
     }
 
     @Test
-    public void testEquals2() {
+     void testEquals2() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("42 Main St");
@@ -351,7 +351,7 @@ public class OrderDtoTest {
     }
 
     @Test
-    public void testEquals3() {
+     void testEquals3() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("42 Main St");
@@ -368,7 +368,7 @@ public class OrderDtoTest {
     }
 
     @Test
-    public void testEquals4() {
+     void testEquals4() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("42 Main St");
@@ -396,7 +396,7 @@ public class OrderDtoTest {
     }
 
     @Test
-    public void testEquals5() {
+     void testEquals5() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(0);
         orderDto.setAddressCity("42 Main St");
@@ -422,7 +422,7 @@ public class OrderDtoTest {
     }
 
     @Test
-    public void testEquals6() {
+     void testEquals6() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("Jane");
@@ -448,7 +448,7 @@ public class OrderDtoTest {
     }
 
     @Test
-    public void testEquals7() {
+     void testEquals7() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity(null);
@@ -474,7 +474,7 @@ public class OrderDtoTest {
     }
 
     @Test
-    public void testEquals8() {
+     void testEquals8() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("42 Main St");
@@ -500,7 +500,7 @@ public class OrderDtoTest {
     }
 
     @Test
-    public void testEquals9() {
+     void testEquals9() {
         OrderDto orderDto = new OrderDto();
         orderDto.setCustomerAge(1);
         orderDto.setAddressCity("42 Main St");

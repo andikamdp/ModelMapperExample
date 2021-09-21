@@ -6,14 +6,14 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
-public class NameTest {
+ class NameTest {
     @Test
-    public void testCanEqual() {
+     void testCanEqual() {
         assertFalse((new Name()).canEqual("Other"));
     }
 
     @Test
-    public void testCanEqual2() {
+     void testCanEqual2() {
         Name name = new Name();
 
         Name name1 = new Name();
@@ -23,7 +23,7 @@ public class NameTest {
     }
 
     @Test
-    public void testConstructor() {
+     void testConstructor() {
         Name actualName = new Name();
         actualName.setFirstName("Jane");
         actualName.setLastName("Doe");
@@ -33,7 +33,7 @@ public class NameTest {
     }
 
     @Test
-    public void testEquals() {
+     void testEquals() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");
@@ -41,7 +41,7 @@ public class NameTest {
     }
 
     @Test
-    public void testEquals10() {
+     void testEquals10() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName(null);
@@ -55,7 +55,7 @@ public class NameTest {
     }
 
     @Test
-    public void testEquals2() {
+     void testEquals2() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");
@@ -63,7 +63,7 @@ public class NameTest {
     }
 
     @Test
-    public void testEquals3() {
+     void testEquals3() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");
@@ -73,7 +73,7 @@ public class NameTest {
     }
 
     @Test
-    public void testEquals4() {
+     void testEquals4() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");
@@ -87,7 +87,7 @@ public class NameTest {
     }
 
     @Test
-    public void testEquals5() {
+     void testEquals5() {
         Name name = new Name();
         name.setLastName("Jane");
         name.setFirstName("Jane");
@@ -99,7 +99,7 @@ public class NameTest {
     }
 
     @Test
-    public void testEquals6() {
+     void testEquals6() {
         Name name = new Name();
         name.setLastName(null);
         name.setFirstName("Jane");
@@ -111,7 +111,7 @@ public class NameTest {
     }
 
     @Test
-    public void testEquals7() {
+     void testEquals7() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName(null);
@@ -123,7 +123,7 @@ public class NameTest {
     }
 
     @Test
-    public void testEquals8() {
+     void testEquals8() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Doe");
@@ -135,7 +135,7 @@ public class NameTest {
     }
 
     @Test
-    public void testEquals9() {
+     void testEquals9() {
         Name name = new Name();
         name.setLastName(null);
         name.setFirstName("Jane");

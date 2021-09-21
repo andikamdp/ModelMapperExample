@@ -13,7 +13,7 @@ import java.util.Date;
 import static org.springframework.test.util.AssertionErrors.assertEquals;
 
 @SpringBootTest
-public class UtilsTest {
+ class UtilsTest {
 
     @Test
     void initUtils() {

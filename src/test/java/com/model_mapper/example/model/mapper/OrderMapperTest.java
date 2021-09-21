@@ -16,9 +16,9 @@ import java.util.Date;
 
 import org.junit.jupiter.api.Test;
 
-public class OrderMapperTest {
+ class OrderMapperTest {
     @Test
-    public void testSimpleOrder() {
+     void testSimpleOrder() {
         OrderMapper orderMapper = new OrderMapper();
 
         Name name = new Name();
@@ -54,7 +54,7 @@ public class OrderMapperTest {
     }
 
     @Test
-    public void testSimpleOrder2() {
+     void testSimpleOrder2() {
         OrderMapper orderMapper = new OrderMapper();
 
         Name name = new Name();
@@ -90,7 +90,7 @@ public class OrderMapperTest {
     }
 
     @Test
-    public void testSimpleOrder3() {
+     void testSimpleOrder3() {
         OrderMapper orderMapper = new OrderMapper();
 
         Name name = new Name();
@@ -124,7 +124,7 @@ public class OrderMapperTest {
     }
 
     @Test
-    public void testSimpleOrder4() {
+     void testSimpleOrder4() {
         OrderMapper orderMapper = new OrderMapper();
 
         Name name = new Name();
@@ -160,7 +160,7 @@ public class OrderMapperTest {
     }
 
     @Test
-    public void testDateMapper() {
+     void testDateMapper() {
         OrderMapper orderMapper = new OrderMapper();
 
         Name name = new Name();
@@ -196,7 +196,7 @@ public class OrderMapperTest {
     }
 
     @Test
-    public void testDateMapper2() {
+     void testDateMapper2() {
         OrderMapper orderMapper = new OrderMapper();
 
         Name name = new Name();
@@ -232,10 +232,10 @@ public class OrderMapperTest {
     }
 
     @Test
-    public void testConstructor() {
+     void testConstructor() {
         // TODO: This test is incomplete.
-        //   Reason: Nothing to assert: the constructed class does not have observers (e.g. getters or public fields).
-        //   Add observers (e.g. getters or public fields) to the class.
+        //   Reason: Nothing to assert: the constructed class does not have observers (e.g. getters or  fields).
+        //   Add observers (e.g. getters or  fields) to the class.
         //   See https://diff.blue/R002
 
         new OrderMapper();

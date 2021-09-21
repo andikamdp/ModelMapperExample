@@ -12,14 +12,14 @@ import java.util.Date;
 
 import org.junit.jupiter.api.Test;
 
-public class CustomerTest {
+ class CustomerTest {
     @Test
-    public void testCanEqual() {
+     void testCanEqual() {
         assertFalse((new Customer()).canEqual("Other"));
     }
 
     @Test
-    public void testCanEqual2() {
+     void testCanEqual2() {
         Customer customer = new Customer();
 
         Name name = new Name();
@@ -35,7 +35,7 @@ public class CustomerTest {
     }
 
     @Test
-    public void testConstructor() {
+     void testConstructor() {
         Customer actualCustomer = new Customer();
         actualCustomer.setAge(1);
         LocalDateTime atStartOfDayResult = LocalDate.of(1970, 1, 1).atStartOfDay();
@@ -53,7 +53,7 @@ public class CustomerTest {
     }
 
     @Test
-    public void testEquals() {
+     void testEquals() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");
@@ -67,7 +67,7 @@ public class CustomerTest {
     }
 
     @Test
-    public void testEquals2() {
+     void testEquals2() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");
@@ -81,7 +81,7 @@ public class CustomerTest {
     }
 
     @Test
-    public void testEquals3() {
+     void testEquals3() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");
@@ -97,7 +97,7 @@ public class CustomerTest {
     }
 
     @Test
-    public void testEquals4() {
+     void testEquals4() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");

@@ -12,14 +12,14 @@ import java.util.Date;
 
 import org.junit.jupiter.api.Test;
 
-public class OrderTest {
+ class OrderTest {
     @Test
-    public void testCanEqual() {
+     void testCanEqual() {
         assertFalse((new Order()).canEqual("Other"));
     }
 
     @Test
-    public void testCanEqual2() {
+     void testCanEqual2() {
         Order order = new Order();
 
         Name name = new Name();
@@ -46,7 +46,7 @@ public class OrderTest {
     }
 
     @Test
-    public void testConstructor() {
+     void testConstructor() {
         Order actualOrder = new Order();
         BillingAddress billingAddress = new BillingAddress();
         billingAddress.setCity("Oxford");
@@ -77,7 +77,7 @@ public class OrderTest {
     }
 
     @Test
-    public void testEquals() {
+     void testEquals() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");
@@ -102,7 +102,7 @@ public class OrderTest {
     }
 
     @Test
-    public void testEquals2() {
+     void testEquals2() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");
@@ -127,7 +127,7 @@ public class OrderTest {
     }
 
     @Test
-    public void testEquals3() {
+     void testEquals3() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");
@@ -154,7 +154,7 @@ public class OrderTest {
     }
 
     @Test
-    public void testEquals4() {
+     void testEquals4() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");
@@ -202,7 +202,7 @@ public class OrderTest {
     }
 
     @Test
-    public void testEquals5() {
+     void testEquals5() {
         Name name = new Name();
         name.setLastName("Jane");
         name.setFirstName("Jane");
@@ -248,7 +248,7 @@ public class OrderTest {
     }
 
     @Test
-    public void testEquals6() {
+     void testEquals6() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");
@@ -294,7 +294,7 @@ public class OrderTest {
     }
 
     @Test
-    public void testEquals7() {
+     void testEquals7() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");
@@ -340,7 +340,7 @@ public class OrderTest {
     }
 
     @Test
-    public void testEquals8() {
+     void testEquals8() {
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");

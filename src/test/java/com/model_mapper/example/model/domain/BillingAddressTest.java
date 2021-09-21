@@ -6,14 +6,14 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
-public class BillingAddressTest {
+ class BillingAddressTest {
     @Test
-    public void testCanEqual() {
+     void testCanEqual() {
         assertFalse((new BillingAddress()).canEqual("Other"));
     }
 
     @Test
-    public void testCanEqual2() {
+     void testCanEqual2() {
         BillingAddress billingAddress = new BillingAddress();
 
         BillingAddress billingAddress1 = new BillingAddress();
@@ -24,7 +24,7 @@ public class BillingAddressTest {
     }
 
     @Test
-    public void testConstructor() {
+     void testConstructor() {
         BillingAddress actualBillingAddress = new BillingAddress();
         actualBillingAddress.setCity("Oxford");
         actualBillingAddress.setProvince("Province");
@@ -36,7 +36,7 @@ public class BillingAddressTest {
     }
 
     @Test
-    public void testEquals() {
+     void testEquals() {
         BillingAddress billingAddress = new BillingAddress();
         billingAddress.setCity("Oxford");
         billingAddress.setStreetNo(1);
@@ -45,7 +45,7 @@ public class BillingAddressTest {
     }
 
     @Test
-    public void testEquals10() {
+     void testEquals10() {
         BillingAddress billingAddress = new BillingAddress();
         billingAddress.setCity("Oxford");
         billingAddress.setStreetNo(1);
@@ -59,7 +59,7 @@ public class BillingAddressTest {
     }
 
     @Test
-    public void testEquals11() {
+     void testEquals11() {
         BillingAddress billingAddress = new BillingAddress();
         billingAddress.setCity(null);
         billingAddress.setStreetNo(1);
@@ -75,7 +75,7 @@ public class BillingAddressTest {
     }
 
     @Test
-    public void testEquals12() {
+     void testEquals12() {
         BillingAddress billingAddress = new BillingAddress();
         billingAddress.setCity("Oxford");
         billingAddress.setStreetNo(null);
@@ -91,7 +91,7 @@ public class BillingAddressTest {
     }
 
     @Test
-    public void testEquals13() {
+     void testEquals13() {
         BillingAddress billingAddress = new BillingAddress();
         billingAddress.setCity("Oxford");
         billingAddress.setStreetNo(1);
@@ -107,7 +107,7 @@ public class BillingAddressTest {
     }
 
     @Test
-    public void testEquals2() {
+     void testEquals2() {
         BillingAddress billingAddress = new BillingAddress();
         billingAddress.setCity("Oxford");
         billingAddress.setStreetNo(1);
@@ -116,7 +116,7 @@ public class BillingAddressTest {
     }
 
     @Test
-    public void testEquals3() {
+     void testEquals3() {
         BillingAddress billingAddress = new BillingAddress();
         billingAddress.setCity("Oxford");
         billingAddress.setStreetNo(1);
@@ -127,7 +127,7 @@ public class BillingAddressTest {
     }
 
     @Test
-    public void testEquals4() {
+     void testEquals4() {
         BillingAddress billingAddress = new BillingAddress();
         billingAddress.setCity("Oxford");
         billingAddress.setStreetNo(1);
@@ -143,7 +143,7 @@ public class BillingAddressTest {
     }
 
     @Test
-    public void testEquals5() {
+     void testEquals5() {
         BillingAddress billingAddress = new BillingAddress();
         billingAddress.setCity(null);
         billingAddress.setStreetNo(1);
@@ -157,7 +157,7 @@ public class BillingAddressTest {
     }
 
     @Test
-    public void testEquals6() {
+     void testEquals6() {
         BillingAddress billingAddress = new BillingAddress();
         billingAddress.setCity("Province");
         billingAddress.setStreetNo(1);
@@ -171,7 +171,7 @@ public class BillingAddressTest {
     }
 
     @Test
-    public void testEquals7() {
+     void testEquals7() {
         BillingAddress billingAddress = new BillingAddress();
         billingAddress.setCity("Oxford");
         billingAddress.setStreetNo(0);
@@ -185,7 +185,7 @@ public class BillingAddressTest {
     }
 
     @Test
-    public void testEquals8() {
+     void testEquals8() {
         BillingAddress billingAddress = new BillingAddress();
         billingAddress.setCity("Oxford");
         billingAddress.setStreetNo(null);
@@ -199,7 +199,7 @@ public class BillingAddressTest {
     }
 
     @Test
-    public void testEquals9() {
+     void testEquals9() {
         BillingAddress billingAddress = new BillingAddress();
         billingAddress.setCity("Oxford");
         billingAddress.setStreetNo(1);
