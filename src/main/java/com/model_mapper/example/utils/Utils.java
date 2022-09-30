@@ -19,13 +19,13 @@ public class Utils {
         return new SimpleDateFormat(dateFormat).format(date);
     }
 
-    public static Date dateToStringFormat(String stringDate, String dateFormat) throws ParseException {
+    public static Date stringToDateFormat(String stringDate, String dateFormat) throws ParseException {
         return new SimpleDateFormat(dateFormat).parse(stringDate);
     }
 
-    public static Converter<Date, String> converterDateToString() {
-        return ctx -> ctx.getSource() != null
-                ? Utils.dateToStringFormat(ctx.getSource(), Utils.YYYY_D_MM_D_DD)
-                : "";
+    public static String clearString(String data){
+        if(data==null || data.isEmpty())
+            return data;
+        return data.replaceAll("[^a-zA-Z0-9 .,\\-]", "");
     }
 }

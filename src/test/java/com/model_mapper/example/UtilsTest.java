@@ -24,14 +24,14 @@ import static org.springframework.test.util.AssertionErrors.assertEquals;
 
     @Test
     void stringToDate() throws ParseException {
-        Date date = Utils.dateToStringFormat("20200101",Utils.YYYYMMDD );
+        Date date = Utils.stringToDateFormat("20200101",Utils.YYYYMMDD );
 
         assertEquals("utils test", date, date);
     }
 
     @Test
     void dateToString() throws ParseException {
-        Date date = Utils.dateToStringFormat("20200101",Utils.YYYYMMDD );
+        Date date = Utils.stringToDateFormat("20200101",Utils.YYYYMMDD );
 
         String dateString = Utils.dateToStringFormat(date,Utils.YYYYMMDD );
 

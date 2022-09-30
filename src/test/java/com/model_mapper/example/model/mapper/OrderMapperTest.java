@@ -17,10 +17,10 @@ import java.util.Date;
 import org.junit.jupiter.api.Test;
 
  class OrderMapperTest {
+
+    private final OrderMapper orderMapper = new OrderMapper();
     @Test
      void testSimpleOrder() {
-        OrderMapper orderMapper = new OrderMapper();
-
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("Jane");
@@ -42,7 +42,7 @@ import org.junit.jupiter.api.Test;
         LocalDateTime atStartOfDayResult1 = LocalDate.of(1970, 1, 1).atStartOfDay();
         Date fromResult = Date.from(atStartOfDayResult1.atZone(ZoneId.systemDefault()).toInstant());
         order.setOrderDate(fromResult);
-        OrderDto actualSimpleOrderResult = orderMapper.simpleOrder(order);
+        OrderDto actualSimpleOrderResult = orderMapper.orderToOrderDto(order);
         assertEquals("Oxford", actualSimpleOrderResult.getAddressCity());
         assertEquals("Thu Jan 01 00:00:00 ICT 1970", actualSimpleOrderResult.getDate());
         assertEquals("Doe", actualSimpleOrderResult.getCustomerLastName());
@@ -55,8 +55,7 @@ import org.junit.jupiter.api.Test;
 
     @Test
      void testSimpleOrder2() {
-        OrderMapper orderMapper = new OrderMapper();
-
+       
         Name name = new Name();
         name.setLastName("Doe");
         name.setFirstName("");
@@ -78,7 +77,7 @@ import org.junit.jupiter.api.Test;
         LocalDateTime atStartOfDayResult1 = LocalDate.of(1970, 1, 1).atStartOfDay();
         Date fromResult = Date.from(atStartOfDayResult1.atZone(ZoneId.systemDefault()).toInstant());
         order.setOrderDate(fromResult);
-        OrderDto actualSimpleOrderResult = orderMapper.simpleOrder(order);
+        OrderDto actualSimpleOrderResult = orderMapper.orderToOrderDto(order);
         assertEquals("Oxford", actualSimpleOrderResult.getAddressCity());
         assertEquals("Thu Jan 01 00:00:00 ICT 1970", actualSimpleOrderResult.getDate());
         assertEquals("Doe", actualSimpleOrderResult.getCustomerLastName());
@@ -91,7 +90,7 @@ import org.junit.jupiter.api.Test;
 
     @Test
      void testSimpleOrder3() {
-        OrderMapper orderMapper = new OrderMapper();
+        
 
         Name name = new Name();
         name.setLastName("Doe");
@@ -112,7 +111,7 @@ import org.junit.jupiter.api.Test;
         order.setBillingAddress(billingAddress);
         LocalDateTime atStartOfDayResult = LocalDate.of(1970, 1, 1).atStartOfDay();
         order.setOrderDate(Date.from(atStartOfDayResult.atZone(ZoneId.systemDefault()).toInstant()));
-        OrderDto actualSimpleOrderResult = orderMapper.simpleOrder(order);
+        OrderDto actualSimpleOrderResult = orderMapper.orderToOrderDto(order);
         assertEquals("Oxford", actualSimpleOrderResult.getAddressCity());
         assertEquals("Thu Jan 01 00:00:00 ICT 1970", actualSimpleOrderResult.getDate());
         assertEquals("Doe", actualSimpleOrderResult.getCustomerLastName());
@@ -125,7 +124,7 @@ import org.junit.jupiter.api.Test;
 
     @Test
      void testSimpleOrder4() {
-        OrderMapper orderMapper = new OrderMapper();
+        
 
         Name name = new Name();
         name.setLastName("");
@@ -148,7 +147,7 @@ import org.junit.jupiter.api.Test;
         LocalDateTime atStartOfDayResult1 = LocalDate.of(1970, 1, 1).atStartOfDay();
         Date fromResult = Date.from(atStartOfDayResult1.atZone(ZoneId.systemDefault()).toInstant());
         order.setOrderDate(fromResult);
-        OrderDto actualSimpleOrderResult = orderMapper.simpleOrder(order);
+        OrderDto actualSimpleOrderResult = orderMapper.orderToOrderDto(order);
         assertEquals("Oxford", actualSimpleOrderResult.getAddressCity());
         assertEquals("Thu Jan 01 00:00:00 ICT 1970", actualSimpleOrderResult.getDate());
         assertEquals("", actualSimpleOrderResult.getCustomerLastName());
@@ -161,7 +160,7 @@ import org.junit.jupiter.api.Test;
 
     @Test
      void testDateMapper() {
-        OrderMapper orderMapper = new OrderMapper();
+        
 
         Name name = new Name();
         name.setLastName("Doe");
@@ -184,7 +183,7 @@ import org.junit.jupiter.api.Test;
         LocalDateTime atStartOfDayResult1 = LocalDate.of(1970, 1, 1).atStartOfDay();
         Date fromResult = Date.from(atStartOfDayResult1.atZone(ZoneId.systemDefault()).toInstant());
         order.setOrderDate(fromResult);
-        OrderDto actualDateMapperResult = orderMapper.dateMapper(order);
+        OrderDto actualDateMapperResult = orderMapper.orderToOrderDto(order);
         assertEquals("Oxford", actualDateMapperResult.getAddressCity());
         assertEquals("1970-01-01", actualDateMapperResult.getDate());
         assertEquals("Doe", actualDateMapperResult.getCustomerLastName());
@@ -197,7 +196,7 @@ import org.junit.jupiter.api.Test;
 
     @Test
      void testDateMapper2() {
-        OrderMapper orderMapper = new OrderMapper();
+        
 
         Name name = new Name();
         name.setLastName("yyyy-MM-dd");
@@ -220,7 +219,7 @@ import org.junit.jupiter.api.Test;
         LocalDateTime atStartOfDayResult1 = LocalDate.of(1970, 1, 1).atStartOfDay();
         Date fromResult = Date.from(atStartOfDayResult1.atZone(ZoneId.systemDefault()).toInstant());
         order.setOrderDate(fromResult);
-        OrderDto actualDateMapperResult = orderMapper.dateMapper(order);
+        OrderDto actualDateMapperResult = orderMapper.orderToOrderDto(order);
         assertEquals("Oxford", actualDateMapperResult.getAddressCity());
         assertEquals("1970-01-01", actualDateMapperResult.getDate());
         assertEquals("yyyy-MM-dd", actualDateMapperResult.getCustomerLastName());
